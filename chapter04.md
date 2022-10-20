@@ -176,7 +176,7 @@ An `initialization vector(IV)` is a number used by encryption systems, and a wir
  - `Replay` - using a sniffed token
  - `DoS` - spamming the reader with frequencies hindering the system useless
 
-### Bluetooth Attacks
+### **Bluetooth Attacks**
 Bluetooth is a short-range wireless system used in `personal area networks(PANs)`. Common attacks include:
  - `Bluejacking` - is the practice of sending unsolicited messages to nearby bluetooth devices.
  - `Bluesnarfing` - refers to the unauthorized access to, or theft of information from, a bluetooth device.
