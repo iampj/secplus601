@@ -80,3 +80,5 @@ Navigate to https://azureforeducation.microsoft.com/devtools and click sign in. 
  - Follow the prompts provided to finalize the setup of your account.
  - Upon the first login, you may need to access the Azure portal's Education section to access software downloads. The quickest way to do that is to search for Education in the search bar at the top of the window.
 
+### ITPro.TV Account Access
+I had to speak with one of the instructors and it seemed to be default set to my `us.af.mil` email but he allowed me to change it and reset the password. I had the account setup for my school email.
