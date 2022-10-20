@@ -301,7 +301,7 @@ Common terms:
  - `Rooting` - the process of modifying an android device to give the user root-level access.
  - `Over-the-air(OTA) updates` - due to the os being installed on flash it is considered firmware, updates to the os often use OTA to keep the device up to date
  - `Custom firmware` - Download custom firmware/os and overwriting the current system
- - `Sideloading` - the process of copying an application package in the Application Packet Kit(APK) format to the device and then activating it.
+ - `Sideloading` - the process of copying an application package in the `Application Packet Kit(APK)` format to the device and then activating it.
 
 #### **Messaging Services**
  - `Short Message Service(SMS)` - Texting 
@@ -360,8 +360,8 @@ A challenge with embedded systems is keeping them up to date with security fixes
  - Weak defaults
 
 ### **Communication Considerations**
- - 5G
- - Narrow-band
- - Baseband radio
- - Subscriber identity module (SIM) cards
- - Zigbee
+ - `5G` - 5G can reach peak speeds higher than 4G
+ - `Narrow-band` - As the name implies, narrow-band signals have a very narrow frequency range.
+ - `Baseband radio` - Baseband radio signal include frequencies that are very near zero. They are typically used when transferring data over cable rather than air.
+ - `Subscriber identity module (SIM) cards` - Mobile devices such as smartphones and tablets.
+ - `Zigbee` - is a suite of communication protocols used for smaller networks, such as within a home for home automation.
