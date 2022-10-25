@@ -1,159 +1,277 @@
-# Protecting Against Advanced Attacks
+# **Protecting Against Advanced Attacks**
 
-## Understanding Attack Frameworks
+## **Understanding Attack Frameworks**
 
-### Cyber Kill Chain
+### **Cyber Kill Chain**
+Historically `kill chain` has been a military concept related to an attack. It starts with the identification of a target, dispatching resources to the target, someone deciding to attack and giving the order, and it ends with destruction of the target. Military personnel attempt to break an opponents kill chain, such as by disrupting communication methods.
 
-### Diamond Model of Intrusion Analysis
+ 1. `Reconnaissance`
+ 2. `Weaponization`
+ 3. `Delivery`
+ 4. `Exploitation`
+ 5. `Installation`
+ 6. `Command and Control (C2)`
+ 7. `Actions on Objectives`
 
-### MITRE ATT&CK
+### **Diamond Model of Intrusion Analysis**
+The `Diamond Model of Intrusion Analysis` focuses on understanding the attackers by analyzing four key components of every intrusion event.
 
-## Identifying Network Attacks
+ - `Adversary`
+ - `Capabilities`
+ - `Infrastructure`
+ - `Victim`
 
-### DoS Versus DDoS
+### **MITRE ATT&CK**
+`MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)` is a knowledge of tactics and techniques used in real-world attacks. The knowledge base is presented in a matrix or table format.
 
-### SYN Flood Attacks
+---
 
-### Spoofing
+## **Identifying Network Attacks**
 
-### On-Path Attacks
+### **DoS Versus DDoS**
+Dos is one computer, DDoS is multiple difference being attack strength.
 
-### Secure Socket Layer Striping
+### **SYN Flood Attacks**
+Sends a ton of SYN/ACK without completing the handshake. Leaves the server with multiple open connections.
 
-### Layer 2 Attacks
+### **Spoofing**
+spoofs ip, mac, or email
 
-#### ARP Poisoning Attacks
+### **On-Path Attacks**
+(sometimes called man in the middle attack) is a form of active interception or active eavesdropping.
 
-#### MAC Flooding
+### **Secure Socket Layer Striping**
+Changes HTTPS to HTTP leaving data unencrypted.
 
-#### MAC Cloning
+### **Layer 2 Attacks**
 
-### DNS Attacks
+#### **ARP Poisoning Attacks**
+`ARP poisoning` is an attack that misleads computers or switches about the actual MAC address of a system. The MAC address is the physical address, or hardware address, assigned to the NIC. ARP resolves the IP addresses of the systems to their hardware address and stores the result in an area of memory known as ARP cache.
 
-#### DNS Poisoning Attacks
+ARP uses two primary messages:
+ - `ARP request`
+ - `ARP reply`
 
-#### Pharming Attacks
+**ARP On-Path Attacks** - In an ARP on-path attack, an attacker can eavesdrop, redirect network traffic, and, in some cases, insert malicious code.
 
-#### URL Redirection
+**ARP DoS Attacks** - An attacker can also use ARP poisoning in Dos attack. For example, an attacker can send an ARP reply with a bogus MAC address for the default gateway. The default gateway is the IP address of a router connection that provides a path out of the network. If all the computers cache a bogus MAC address for the default gateway, none of them can reach it, and it stops all traffic out of the network.
 
-#### Domain Hijacking
+#### **MAC Flooding**
+`MAC flooding` is an attack against a switch that attempts to overload it with different MAC addresses associated with each physical port. You typically have only one device connected to any physical port. During normal operation, the switchs internal table store the MAC address associated with this device and maps it to the port. An attacker sends large amounts of traffic with spoofed MAC addresses to the same port in a MAC flooding attack.
 
-#### Domain Reputation
+#### **MAC Cloning**
+MAC cloning is simply changing a systems MAC address
 
-#### DNS Sinkhole
+---
 
-#### DNS Log Files
+### **DNS Attacks**
 
-### Replay Attacks and Session Replays
+#### **DNS Poisoning Attacks**
+A `DNS poisoning` attack attempts to modify or corrupt DNS data. For example, a successful DNS poisoning attack can modify the IP the IP address associated with *google.com* and replace it with a malicious websites ip address.
 
-## Summarizing Secure Coding Concepts
+#### **Pharming Attacks**
+A `pharming attack` is another type of attack that manipulates the DNS name resolution process. It either tries to corrupt the DNS server or the DNS client.
 
-### OWASP
+#### **URL Redirection**
+`URL redirection` is a common technique used to redirect traffic to a different page within a site.
 
-### Code Reuse and Dead Code
+#### **Domain Hijacking**
+In a `domain hijacking` attack, an attacker changes a domain name registration without permission from the owner. Attackers often do so with social engineering techniques to gain unauthorized access to the domain owners email account.
 
-### Third-Party Libraries and SDKs
+#### **Domain Reputation**
+`Domain reputation` helps ISPs determine the likelihood that an email is being sent by a legitimate organization or it is a malicious e-mail. Low rep = ISP may decide to drop the emails.
 
-### Input Validation
+#### **DNS Sinkhole**
+A `DNS sinkhole` is a DNS server that gives incorrect results for one or more domain names.
 
-#### Client-Side and Server Side Input Validation
+#### **DNS Log Files**
+`DNS log files` record DNS queries, such as each request to resolve a hostname to an IP address. These log entries would include the system that sent the request and the IP address returned for the hostname.
 
-#### Other Input Validation Techniques
+---
 
-### Avoiding Race Conditions
+### **Replay Attacks and Session Replays**
+A `replay attack` is one where an attacker replays data that was already part of a communication session. The attacker first captures data sent over a network between two system. The attacker modifies the data and then tries to impersonate one of the clients in the original session and send modified data in session replays.
 
-### Proper Error Handling
+---
 
-### Code Obfuscation and Camouflage
+## **Summarizing Secure Coding Concepts**
 
-### Software Diversity
+### **OWASP**
+The `Open Web Application Security Project (OWASP)` is a nonprofit foundation that is focused on improving the security of software.
 
-#### Outsourced Code Development
+### **Code Reuse and Dead Code**
+`code reuse` saves time and helps prevent the introduction of new bugs. `dead code` is code that is never executed or used.
 
-#### Data Exposure
+### **Third-Party Libraries and SDKs**
 
-#### HTTP Headers
+### **Input Validation**
 
-#### Secure Cookie
+#### **Client-Side and Server Side Input Validation**
 
-#### Code Signing
+#### **Other Input Validation Techniques**
 
-### Analyzing and Reviewing Code
+---
 
-### Software Version Control
+### **Avoiding Race Conditions**
+When two or more modules of an application, or two or more applications, attempt to access a resource at the same time, it can cause a conflict known as a `race condition`
 
-### Secure Development Environment
+Attackers can sometimes exploit `time of check to time of use (TOCTOU)` race condition. This is sometimes called a `state attack`. The attacker tries to race the operating system to do something malicious with ata after the operating system verifies access is allowed (time of check) but before the operating system performs a legitimate action at the time of use.
 
-### Database Concepts 
+### **Proper Error Handling**
+ - `Errors to the user should be general`
+ - `Errors to the devs should be detailed and logged`
 
-#### Normalization
+### **Code Obfuscation and Camouflage**
+`Obfuscation` attempts to make something unclear or difficult to understand.
 
-#### SQL Queries
+### **Software Diversity**
+Automated software diversity is sometimes used to mimic the use of multiple different core languages. Normally, a compiler converts code written in a programming language into binary executable file.
 
-### Provisioning and Deprovisioning
+#### **Outsourced Code Development**
+ - Make sure code works as expected
+ - Vulnerable code
+ - Malicious code
+ - Lack of updates
 
-### Integrity Measurement
+#### **Data Exposure**
+Most applications work with data,and it's essential to protect the data. Secure coding techniques take steps to protect data at rest, in transit, and in processing. If it isn't protected it can result in a data breach.
 
-### Web Server Logs
+#### **HTTP Headers**
+ - `HTTP strict-transport security`
+ - `Content-secure-policy`
+ - `x-frame-options`
 
-### Using Scripting and Automation
+#### **Secure Cookie**
+A `secure cookie` is one that has a secure attribute set. This ensures that the cookie is only transmitted over secure channels, such as HTTPS.
 
-## Identifying Malicious Code and Scripts
+#### **Code Signing**
+Certificates are used for various purposes, such as encryption and authenticating users and computers. They can also be used to authenticate and validate software code. As an example, devs can purchase a certificate and associate it with an application or code. This code signing process provides a digital signature for the code, and the certificate includes the hash of the code.
 
-### PowerShell
+---
 
-### Bash
+### **Analyzing and Reviewing Code**
+ - Static code analysis
+ - Manual code review
+ - Dynamic code analysis
+ - Sandboxing
 
-### Python
+### **Software Version Control**
 
-### Macros
+### **Secure Development Environment**
+ - Development
+ - Test
+ - Staging
+ - Production
+ - Quality Assurance
 
-### Visual Basic for Applications(VBA)
+### **Database Concepts**
 
-### OpenSSL
+#### **Normalization**
+`Normalization` of a database refers to organizing the tables and columns to reduce redundant data and improve overall database performance.
 
-### SSH
+#### **SQL Queries**
 
-## Identifying Application Attacks
+---
 
-### Zero-Day Attacks
+### **Provisioning and Deprovisioning**
 
-### Memory Vulnerabilities
+### **Integrity Measurement**
+refers to how extensively the code was tested.
 
-#### Memory Leak
+### **Web Server Logs**
 
-#### Buffer Overflows and Buffer Overflow Attacks
+### **Using Scripting and Automation**
 
-#### Integer Overflow
+---
 
-#### Pointer/Object Deference
+## **Identifying Malicious Code and Scripts**
 
-### Other Injection Attacks
+### **PowerShell**
+look in task mgr for powershell cmdlets
 
-#### Dynamic Link Library Injection
+### **Bash**
+logs showing sh is being invoked to run scripts
 
-#### Lightweight Directory Access Protocols Injection
+### **Python**
+any system reference to .py files
 
-#### Extensible Markup Language Injection
+### **Macros**
 
-### Directory Traversal
+### **Visual Basic for Applications(VBA)**
+if a system acts erratically after opening a file that could be a macros/vba script.
 
-### Cross-Site Scripting
+### **OpenSSL**
 
-### Cross-Site Request Forgery
+### **SSH**
 
-### Server-Side Request Forgeries
+---
 
-### Client-Side Request Forgeries
+## **Identifying Application Attacks**
 
-### Driver Manipulation
+### **Zero-Day Attacks**
 
-### Artificial Intelligence and Machine Learning
+### **Memory Vulnerabilities**
 
-#### AI and ML in Cybersecurity
+#### **Memory Leak**
+a bug in a computer app that causes the application to consume more and more memory the longer it runs.
 
-#### Adversarial Artificial Intelligence
+#### **Buffer Overflows and Buffer Overflow Attacks**
+A `buffer overflow` occurs when an application receives more input, or different input, than it expects. like inputting 10char into a 9char limit input box and submitting.
 
-#### Tainted Data for Machine Learning
+#### **Integer Overflow**
+same as last but for integer
 
-#### Security of Machine Learning Algorithms
+#### **Pointer/Object Deference**
+when you point to a location in memory.
+
+---
+
+### **Other Injection Attacks**
+
+#### **Dynamic Link Library Injection**
+DLL injection is changing the working code libraries while the app is running through injection.
+
+#### **Lightweight Directory Access Protocols Injection**
+LDAP specifies the formats and methods used to query databases of objects such as users, computers, and other objects within a network. LDAP injection attack is sometimes possible when a application is used to query an LDAP-based database. 
+
+Best way to prevent this is by validating the input before using it.
+
+#### **Extensible Markup Language Injection**
+within input boxes xml is input to execute malicious code.
+
+---
+
+### **Directory Traversal**
+is a specific type of injection attack that attempts to access a file including the full directory path or traversing the directory structure on a computer.
+
+### **Cross-Site Scripting**
+XSS is a web app vulnerability that allows attackers to inject scripts into webpages. the CWE team has included XSS in their annual list of the top 25 most dangerous software weaknesses for several years. it is number 1 on their 2020 list.
+
+ - `reflected xss or non-persistent`
+ - `stored xss or persistent`
+
+### **Cross-Site Request Forgery**
+modifying the url to execute account commands upon loading.
+domain.com/edit?action=set&key=email=attackers@pwn.com
+
+### **Server-Side Request Forgeries**
+
+### **Client-Side Request Forgeries**
+using cookies to manipulate server responses
+
+### **Driver Manipulation**
+deep understanding attack of drivers and driver code. used to redirect apps to use malicious drivers
+
+### **Artificial Intelligence and Machine Learning**
+
+#### **AI and ML in Cybersecurity**
+ - google uses machine learning to block as many as 100million spam emails daily.
+
+#### **Adversarial Artificial Intelligence**
+attempts to fool ai by supplying it with deceptive input
+ - sign reading ai / but we put stickers on stop signs and confuse the AI
+
+#### **Tainted Data for Machine Learning**
+
+
+#### **Security of Machine Learning Algorithms**
