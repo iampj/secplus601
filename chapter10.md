@@ -258,10 +258,12 @@ Secure/Multipurpose Internet Mail Extensions(S/MIME) is one of the most popular 
 #### Encrypting HTTPS Traffic with TLS
 
 #### Downgrade Attacks on Weak Implementations
+A `downgrade attack` is a type of attack that forces a system to downgrade its security. The attacker then exploits the lesser security control. It is most often associated with cryptographic attacks due to weak implementations of cipher suites.
 
 ---
 
 ### Blockchain
+`Blockchain` is commonly defined as a distributed, decentralized, public ledger. In other words, it is a public record-keeping technology. Banks commonly use ledgers to record transactions such as deposits and withdrawals.
 
 ### Crypto Diversity
 
