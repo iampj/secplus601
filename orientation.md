@@ -9,6 +9,20 @@ Then ask them to reset your email password (as we weren't given one yet) to some
 
 ---
 
+### Get your books and required equipment
+
+Head to the student book store and pickup the following:
+ - Sec+ Get Ahead Get Certified (red)
+ - Sec+ Practice Book (yellow)
+ - 500gb external hard drive
+ - Flash drive (optional)
+ - Earbuds (optional)
+
+At checkout tell them these should be charged to your account already. If they have any questions refer them to Janette Smith.
+
+
+---
+
 ### Classroom hours logged
 
 Upon entering the classroom (@0800 & @1200) and leaving (@1100 & @1500) scan your student ID at the small kiosk in the door of the classroom
@@ -82,3 +96,6 @@ Navigate to https://azureforeducation.microsoft.com/devtools and click sign in. 
 
 ### ITPro.TV Account Access
 I had to speak with one of the instructors and it seemed to be default set to my `us.af.mil` email but he allowed me to change it and reset the password. I had the account setup for my school email.
+
+### Schedule your exam
+When I was on chapter 10/11 I got my exam scheduled a week out on the following friday. Speak with your instructor and get the registration form and fill it out. Bring it to the assessment center (inside student services) and ensure you get it scheduled with them and report to your unit your test date.
