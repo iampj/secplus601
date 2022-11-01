@@ -33,18 +33,39 @@ A `clean desk space` policy directs users to keep their areas organized and free
  - Personal items such as mail with Personally Identifiable Information (PII)
 
 #### Background Check
+It's common for organizations to perform background checks on potential employees and even after employees are hired. `Background checks` investigate employees histories to discover anything about them that might make them less-than-ideal for any given job.
 
 #### Onboarding
+`Onboarding` is the process of granting individuals access to an orgs computing resources after being hired.
 
 #### Offboarding
+`Offboarding` is the process of removing an employees access when they leave the company.
+
+A `non-disclosure agreement(NDA)` is used between two entities to ensure that proprietary data is not disclosed to unauthorized entities.
 
 #### Social Media Analysis
+In the context of personnel security policies, social media analysis refers to monitoring employee activity on social media network.
 
 #### Third-Party Risk Management
+Organizations interact with entities outside the organization (commonly called third parties) for various reasons, such as purchasing supplies, creating partnerships, and more. These relationships often introduce risks that need to be managed.
+
+A `supply chain` includes all the elements required to produce and sell products and services. In some cases, the supply chain becomes an attack vector.
+
+`Vendor diversity` is often required in policies to grant extra resilience to sed attacks.
+
+`End of Life (EOL)` and `End of Service Life (EOSL)`
+
+`Service Level Agreement(SLA)` - an agreement between a company and a vendor that stipulates performance expectations, such as minimum uptime and maximum downtime.
+
+`Memorandum of understanding(MOU)` - an MOU, sometimes called a `memorandum of agreement(MOA)` expresses and understanding between two or more parties indicating their intention to work together towards a common goal.
+
+`Business Partners Agreement(BPA)` - 
 
 #### Terms of Agreement
+A `term of agreement` refers to the period that an agreement shall be in effect.
 
 #### Measurement System Analysis
+A `measurement systems analysis(MSA)` evaluates the processes and tools used to make measurements. The MSA uses various methods to identify variations within a measurement process that can result in invalid results.
 
 ---
 
@@ -61,6 +82,12 @@ A `clean desk space` policy directs users to keep their areas organized and free
 ---
 
 ### Incident Response Process
+ - Preparation
+ - Identification
+ - Containment
+ - Eradication
+ - Recovery
+ - Lessons Learned
 
 ### Understanding SOAR
 

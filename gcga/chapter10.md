@@ -266,48 +266,75 @@ A `downgrade attack` is a type of attack that forces a system to downgrade its s
 `Blockchain` is commonly defined as a distributed, decentralized, public ledger. In other words, it is a public record-keeping technology. Banks commonly use ledgers to record transactions such as deposits and withdrawals.
 
 ### Crypto Diversity
+`Cryptographic diversity` typically refers to using different methods to protect security keys. The idea is that if a vulnerability appears in one method, the diversified methods still protect the key.
 
 ### Identifying Limitations
+When evaluating different algorithms, it is important to consider their possible limitations. When you understand these, it becomes much easier to identify the best algorithm to meet specific requirements.
 
 #### Resource Vs. Security Constraints
 
 #### Speed and Time
+Speed refers to how long an algorithm takes to compute the result.
 
 #### Size and Computational Overhead
+Size in cryptography typically relates to the amount of memory space the algorithm needs to execute.
 
 #### Entropy
+`Entropy` refers to the randomness of a cryptographic algorithm.
 
 #### Predictability
+In general, predictability refers to knowing what will likely happen based on repeating the same event. same applies to cryptography with input and output comparisons.
 
 #### Weak Keys
+Even the strongest algorithms can be easily cracked when weak keys are used.
 
 #### Longevity
+Longevity refers to how long you can expect to use an algorithm.
 
 #### Reuse
+When using symmetric encryption, the same keys shouldn't be reused.
 
 ---
 
 ### Plaintext Attack
+A plaintext attack is possible if an attacker has some known plaintext and the ciphertext created from this plaintext.
 
 ### Common Use Cases
+ - Supporting integrity
+ - Supporting confidentiality 
+ - Supporting non-repudiation
+ - Supporting high resiliency
+ - Supporting obfuscation
+ - Supporting low power devices
+ - Supporting low latency
 
 ---
 
 ## Exploring PKI Components
+A `public key infrastructure(PKI)` is a group of technologies used to request, create, manage, store, distribute, and revoke digital certificates. Asymmetric encryption depends on the use of certificates for a variety of purposes, such as protecting email and protecting internet traffic with TLS.
 
 ### Certificate Authority
+A `certificate authority(CA)` issues, manages, validates, and revokes certificates. In some contexts, you might see a CA referred to as a certification authority.
 
 ### Certificate Trust Models
+CAs are trusted by placing a copy of their root certificate into a trusted root CA store.
+
+The most common trust model is the hierarchical trust model, also known as centralized trust model. In this model, the public CA creates the first CA, known as the root CA.
 
 ### Registration Authority and CSRs
 
 ### Online vs. Offline CAs
+If the CA is online, meaning it is accessible over a network, it's possible to submit the CSR using an automated process.
 
 ### Updating and Revoking Certificates
 
 ### Certificate Revocation List
 
+
+Online Certificate Status Protocol(OCSP) allows the client to 
+
 ### Public Key Pinning
+Public key pinning is a security mechanism designed to prevent attackers from impersonating a website using fraudulent certificates.
 
 ### Key Escrow
 
