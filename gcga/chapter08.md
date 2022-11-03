@@ -205,10 +205,10 @@ A `bug bounty` program provides monetary incentive for security researchers to d
 Intrusive can harm systems
 
 ### Exercise Types
- - `red team`
- - `blue team`
- - `purple team`
- - `white team`
+ - `red team` - attack
+ - `blue team` - defend
+ - `purple team` - not a competition but helps both sides learn and grow
+ - `white team` - oversees the CTF event
 
 ---
 

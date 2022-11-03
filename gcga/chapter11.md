@@ -129,7 +129,7 @@ Organizations implement digital forensic techniques when collecting information 
 
 #### Admissibility of Documentation and Evidence
 
- - Tags
+ - `Tags`
  - Chain of Custody
  - Legal Hold
  - Video
@@ -147,16 +147,56 @@ Organizations implement digital forensic techniques when collecting information 
 ---
 
 ### Acquisition and Preservation
+When performing data acquisition for digital forensics, it's important to follow specific procedures to ensure that the data is not modified.
 
 #### Order of Volatility
+`Order of volatility` refers to the order in which you should collect evidence. Volatile means that it is not permanent.
+
+Most to least volatile:
+ - Cache
+ - RAM
+ - Swap or pagefile
+ - Disk
+ - Attached
+ - Network
 
 #### Data Acquisition
 
+Examples include:
+ - Web history
+ - Recycle bin
+ - Windows error reporting
+ - remote desktop protocol (RDP) cache
+
+
 #### Forensic Tools
 
+Capturing Data
+ - dd
+ - memdump
+ - WinHex
+ - FTK imager
+ - Autopsy
+
+Verifying Integrity
+ - Hashes and checksums
+ - Provenance - refers to tracing something back to its origin
+ - sha1sum command is used to create and compare hashes
+
+Bandwidth Monitors
+
+
 #### Electronic Discovery
+`eDiscovery` is the identification and collection of electronically stored information. This includes files of any kind, voice mail, social media entries, and website data.
+
+Examples:
+ - File - file metadata includes items such as when a files was created who created it, when it was modified, and when it was last accessed.
+ - Email
+ - Web
+ - Mobile - often provides the most metadata information (location, apps, messages, web)
 
 #### Data Recovery
+Files that have been deleted can be restored if the user did not properly sanitize the machine.
 
 ---
 
@@ -168,21 +208,65 @@ Organizations implement digital forensic techniques when collecting information 
 
 ### Classifying Data Types
 
+Example:
+ - TopSecret
+ - Secret
+ - Confidential
+
+Sensitive information identifiers used by private companies
+ - Public Data
+ - Private Data
+ - Confidential Data
+ - Proprietary Data
+ - Financial Information
+ - Employee Data
+ - Customer Data
+
 ### PII and Health Information
 
+PII includes:
+ - Full name
+ - Birthday and birthplace
+ - Medical and health information
+ - street or email address information
+ - personal characteristics, such as biometric data
+ - any type of identification number (SSN or DLN)
+
 ### Impact Assessment
+An impact assessment helps an organization understand the value of data by considering the impact if it is lost or released to the public.
+
+Data governance refers to the process an organization uses to manage, process, and protect data.
+
+While data quality is a core goal of data governance, many organizations are motivated to implement data governance to comply with external laws and regulation. Some of the regulations that affect risk posture are listed here:
+ - HIPAA - health information
+ - Gramm-Leach Bliley Act (GLBA) - financial service
+ - Sarbane-Oxley Act (SOX) - requires executives within an org take individual responsibility for the accuracy of financial reports
+ - General Data Protection Regulation (GDPR) - EU directive mandates the protection of privacy of individuals who live in the EU
+
+GDPR and other laws mandate the use of privacy notices on websites.
 
 ### Privacy Enhancing Technologies
+Several methods can be used to provide additional privacy protections for data.
 
-#### Data Masking
+ - Data masking  (name: patrick jordan => john pseudo)
+ - Anonymization (medical report of patients w/o their pii on it makes it general data)
+ - Pseudo-Anonymization (medical reports of patients with random generated info in place of their pii)
+ - Tokenization (converts sensitive pii into a hash/token and is able to be changed back)
 
-#### Anonymization
-
-#### Tokenization
+data retention policy - details how long data should be stored and where
 
 ---
 
 ### Data Sanitization
+ - file shredding -some applications remove all remnants of a file using a shredding technique. they do so by repeatedly overwriting the space where the file is located with 1s and 0s.
+ - wiping - a disk wiping writes different patterns of 1s and 0s on a disk
+ - erasing and overwriting - ssds use flash memory instead of magnetic storage platters. overwriting is necessary
+ - paper shredding - snip snip
+ - burning - incinerator
+ - pulping - reduces shredded paper to a mash
+ - pulverizing - hammer to disk
+ - degaussing - magnet drives
+ - third party companies - make others do it and blame is shifted
 
 ---
 
