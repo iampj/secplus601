@@ -70,14 +70,36 @@ A `measurement systems analysis(MSA)` evaluates the processes and tools used to 
 ---
 
 ## Incident Response Policies
+Many orgs create `incident response policies` to help personnel identify and respond to incidents. A `security incident` is an adverse event or series of events that can negatively affect the confidentiality, integrity, or availability of data or systems within the organization, or that has the potential to do so.
+
+As an example, a `data breach` is a security incident where unauthorized entities access data. Common data breaches occur after an attacker gains access to a network, finds vulnerable systems holding data, and exfiltrates or extracts it.
 
 ### Incident Response Plan
+An `incident response plan` provides more detail then the incident response policy. It provides organizations with a formal, coordinated plan that personnel can use when responding to an incident.
+
+Some of the common elements included with an incident response plan include:
+ - Definitions of incident types
+ - Incident response team
+ - Roles and responsibilities
 
 #### Communication Plan
+A `communication plan` is part of an incident response plan, and it provides direction on how to communicate issues related to an incident. As with all elements of a incident response plan, it's important to create communication plan before the incident. If a plan isn't in place, the wrong people may talk to the media and give the impression that the incident is causing chaos within the organization.
+
+It's common for a communication plan to include the following elements:
+ - First responders
+ - Internal communication
+ - Reporting requirements
+ - External communication
+ - Law enforcement
+ - Customer communication
 
 #### Data Breach Responses
+Lawsuits, monetary loss
+
 
 #### Stakeholder Management
+Communication with them is important
+dont give too much away but give them what they want.
 
 ---
 
@@ -90,20 +112,37 @@ A `measurement systems analysis(MSA)` evaluates the processes and tools used to 
  - Lessons Learned
 
 ### Understanding SOAR
+A trend in incident response is the use of `Security Orchestration, Automation, and Response (SOAR)` tools to respond to low-level events automatically.
 
 #### Playbooks
+A steps document for formal procedures to follow for well-known incidents.
 
 #### Runbooks
+Runbooks implement guidelines documented in playbooks for automated services to handle them. like spam filters on emails n such.
 
 ---
 
 ## Understanding Digital Forensics
+Organizations implement digital forensic techniques when collecting information after an incident.
 
 ### Key Aspects of Digital Forensics
 
 #### Admissibility of Documentation and Evidence
 
+ - Tags
+ - Chain of Custody
+ - Legal Hold
+ - Video
+ - Interviews
+ - Event Logs
+ - Sequence of Events
+ - Reports
+
 #### On-Premises Vs. Cloud Concerns
+
+ - right to audit
+ - regulatory jurisdiction
+ - data breach notification laws
 
 ---
 

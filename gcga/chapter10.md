@@ -331,15 +331,36 @@ If the CA is online, meaning it is accessible over a network, it's possible to s
 ### Certificate Revocation List
 
 
-Online Certificate Status Protocol(OCSP) allows the client to 
+Online Certificate Status Protocol(OCSP) allows the client to query the CA with the serial number of the certificate.
+
+OCSP stapling solves this problem. Less handshakes are needed.
 
 ### Public Key Pinning
 Public key pinning is a security mechanism designed to prevent attackers from impersonating a website using fraudulent certificates.
 
 ### Key Escrow
+`Key escrow` is the process of placing a copy of a private key in a safe environment.
 
 ### Key Management
+`Key management` within a PKI refers to all the steps taken to manage public and private keys used within the PKI. This includes keeping private keys private, distributing public keys in certificates, and revoking certificates when keys are compromised.
 
 ### Comparing Certificate Types
 
+ - Machine/Computer
+ - User
+ - Email
+ - Code signing
+ - Self-signed
+ - Root
+ - Wildcard
+ - Subject alt name
+ - Domain validation
+ - Extended validation
+
 ### Comparing Certificate Formats
+
+CER
+DER
+PEM/CER/CRT/KEY
+P7B/P7C
+P12/PFX
